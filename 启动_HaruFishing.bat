@@ -8,18 +8,20 @@ echo ===================================================
 echo.
 
 echo [0/4] API Key Configuration...
-echo Do you want to use the built-in free API Key (Gemini 2.5 Flash only)?
-choice /C YN /M "(Press Y for Yes, N to use your own Key)"
-if errorlevel 2 (
-    echo [INFO] You chose to use your own Key. Please enter it in the Web UI later.
-    echo.
-    goto check_python
-)
-if errorlevel 1 (
-    echo GEMINI_API_KEY=AIzaSyBtevzwwRan2ro1WOWsz25WDZ0x6Q-oI8o> .env
-    echo [OK] Built-in free key has been applied!
-    echo.
-)
+choice /C YN /M "Do you want to configure your Gemini API Key now? (Y/N)"
+if errorlevel 2 goto skip_api_key
+if errorlevel 1 goto set_api_key
+
+:set_api_key
+set /p USER_API_KEY="Please paste your Gemini API Key here and press Enter: "
+echo GEMINI_API_KEY=%USER_API_KEY%> .env
+echo [OK] API Key saved to .env file!
+echo.
+goto check_python
+
+:skip_api_key
+echo [INFO] Skipped. Please enter your API Key in the Web UI later.
+echo.
 
 :check_python
 echo [1/4] Checking Python environment...
