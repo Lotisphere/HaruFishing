@@ -1,6 +1,8 @@
 ﻿<div align="center">
 
 # HaruFishing 🎀
+<img src="./assets/cat.png" width="150" alt="Running Cat" />
+
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-FF4B4B.svg)](https://streamlit.io/)
@@ -81,5 +83,6 @@ The frontend is built with **Streamlit** (`ui/web_app.py`). It features:
 
 ---
 *Made with 🎀 by Haru & Mangolotis-anon*
+
 
 

@@ -1,6 +1,8 @@
 ﻿<div align="center">
 
 # HaruFishing 🎀
+<img src="./assets/cat.png" width="150" alt="Running Cat" />
+
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-FF4B4B.svg)](https://streamlit.io/)
@@ -81,3 +83,4 @@ HaruFishingは、トークン消費を極限まで抑え、決定性の高い出
 
 ---
 *Made with 🎀 by Haru & Mangolotis-anon*
+
