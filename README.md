@@ -9,7 +9,7 @@
 A minimalist, multi-agent social circle simulation and prediction engine.
 *Predicting the butterfly effect of any drama, one agent at a time.*
 
-[English](./README.md) | [中文介绍](./README_ZH.md)
+[English](./README.md) | [中文介绍](./README_ZH.md) | [日本語](./README_JP.md)
 
 </div>
 
@@ -81,4 +81,5 @@ The frontend is built with **Streamlit** (`ui/web_app.py`). It features:
 
 ---
 *Made with 🎀 by Haru & Mangolotis-anon*
+
 
