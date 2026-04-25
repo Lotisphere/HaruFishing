@@ -1,0 +1,29 @@
+﻿{
+  "trigger_event": "金持ちの友人がベンツを買ったことが、彼の上司にバレてしまった。",
+  "characters": [
+    {
+      "name": "金持ちの友人 (張三)",
+      "identity": "会社のトップセールスマン。目立ちたがり屋で見栄っ張りだが、実際には多額の住宅ローンを抱えている。",
+      "relationships": {
+        "上司 (李四)": "部下。過去に顧客の奪い合いで摩擦があった。"
+      },
+      "initial_metrics": {
+        "degree_centrality": 0.85,
+        "betweenness_centrality": 0.7,
+        "eigenvector_centrality": 0.95
+      }
+    },
+    {
+      "name": "上司 (李四)",
+      "identity": "支配欲が強く、疑い深い性格。部下が自分より目立つことを極端に嫌い、社内の給与の不公平に関する噂に特に敏感である。",
+      "relationships": {
+        "金持ちの友人 (張三)": "彼を金のなる木と見なしているが、その影響力が大きくなることを警戒している。"
+      },
+      "initial_metrics": {
+        "degree_centrality": 0.65,
+        "betweenness_centrality": 0.4,
+        "eigenvector_centrality": 0.8
+      }
+    }
+  ]
+}

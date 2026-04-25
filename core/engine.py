@@ -87,7 +87,7 @@ class SimulationEngine:
                     reaction = self._call_agent(char_name, action_prompt, system_prompt)
                     
                     # 从回答中提取 JSON 增量图谱更新
-                    json_match = re.search(r'```json(.*?)```', reaction, re.DOTALL)
+                    json_match = re.search(r'```(?:json)?(.*?)```', reaction, re.DOTALL)
                     clean_reaction = reaction
                     if json_match:
                         json_str = json_match.group(1).strip()
@@ -133,4 +133,5 @@ class SimulationEngine:
                 unique_nodes.append(node)
                 
         return "".join(self.interaction_logs), unique_nodes, self.all_edges
+
 

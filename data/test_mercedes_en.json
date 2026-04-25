@@ -1,0 +1,29 @@
+﻿{
+  "trigger_event": "My wealthy friend bought a Mercedes, and his boss found out about it.",
+  "characters": [
+    {
+      "name": "Wealthy Friend (Zhang San)",
+      "identity": "Top sales performer in the company, high-profile personality, likes to show off, but actually bears significant mortgage pressure.",
+      "relationships": {
+        "Boss (Li Si)": "Subordinate. Previously had friction over stealing clients."
+      },
+      "initial_metrics": {
+        "degree_centrality": 0.85,
+        "betweenness_centrality": 0.7,
+        "eigenvector_centrality": 0.95
+      }
+    },
+    {
+      "name": "Boss (Li Si)",
+      "identity": "A control freak, suspicious nature, strongly dislikes subordinates overshadowing him, particularly sensitive to rumors about unfair compensation in the company.",
+      "relationships": {
+        "Wealthy Friend (Zhang San)": "Views him as a cash cow, but is wary of his growing influence."
+      },
+      "initial_metrics": {
+        "degree_centrality": 0.65,
+        "betweenness_centrality": 0.4,
+        "eigenvector_centrality": 0.8
+      }
+    }
+  ]
+}

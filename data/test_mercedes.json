@@ -6,6 +6,11 @@
       "identity": "公司销冠，性格高调，喜欢炫耀，实际上背负着一定的房贷压力",
       "relationships": {
         "老板(李四)": "上下级关系，曾经有过抢客户的摩擦"
+      },
+      "initial_metrics": {
+        "degree_centrality": 0.85,
+        "betweenness_centrality": 0.7,
+        "eigenvector_centrality": 0.95
       }
     },
     {
@@ -13,6 +18,11 @@
       "identity": "公司控制狂，性格多疑，极其反感下属风头盖过自己，尤其在意公司的薪酬公平性传闻",
       "relationships": {
         "富豪朋友(张三)": "将其视为摇钱树，但又提防其功高震主"
+      },
+      "initial_metrics": {
+        "degree_centrality": 0.65,
+        "betweenness_centrality": 0.4,
+        "eigenvector_centrality": 0.8
       }
     }
   ]
