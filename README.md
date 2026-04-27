@@ -66,12 +66,29 @@ HaruFishing is built with a decoupled, three-module architecture to ensure low t
 *   **Module C: The Synthesizer (`core/synthesizer.py`)**
     *   **Log Summarization:** A non-participating "Judge" agent (The Observer) reads the interaction logs and predicts 3 near-term outcomes with probabilities.
     *   **Token Optimization:** Auto-truncates excessively long logs before summarization to prevent context window overflows.
+    *   **Social Network Analysis (SNA):** Evaluates involved characters with quantitative metrics like Effective Propagation Rate and Social Marketing Score.
 
 ## 🌐 Visualization & UI
 The frontend is built with **Streamlit** (`ui/web_app.py`). It features:
-- **Bilingual Interface:** Instant toggle between English and 中文 (Chinese).
+- **Trilingual Interface:** Instant seamless toggle between English, 中文 (Chinese), and 日本語 (Japanese).
+- **Cyber-Geek Aesthetics:** Pure monochrome layout with absolute right angles (0px border-radius), SVG fractal noise topographic background, and "Shippori Mincho" font injection for a top-secret dossier vibe.
+- **Real-Time Graph Metrics:** A floating dashboard calculates Network Density, Clustering Coefficient, and Modularity on the fly.
 - **Dual-mode Input:** Run the built-in classic "Mercedes" scenario instantly, or upload your own documents for a custom extraction.
 - **Dynamic Knowledge Graph:** Integrates **Pyvis** to render a live, force-directed network graph. Watch the nodes (People, Events, Actions) and their relationships grow and repel each other interactively!
+
+
+## 📸 System Screenshots
+
+<div align="center">
+<img src="./assets/ui_cards.png" width="85%" alt="Character Metrics" style="border: 2px solid #555;"/>
+<br><em>Character Node Value Metrics & Initial Setup</em><br><br>
+
+<img src="./assets/ui_eval.png" width="85%" alt="Final Evaluation" style="border: 2px solid #555;"/>
+<br><em>Final Judgement & Quantitative Social Marketing Score</em><br><br>
+
+<img src="./assets/ui_graph.png" width="85%" alt="Knowledge Graph" style="border: 2px solid #555;"/>
+<br><em>Real-Time Force-Directed Knowledge Graph</em><br><br>
+</div>
 
 ## ⚙️ Dependencies Overview
 - `google-generativeai`: Core LLM interactions.
@@ -85,4 +102,7 @@ The frontend is built with **Streamlit** (`ui/web_app.py`). It features:
 *Made with 🎀 by Haru & Mangolotis-anon*
 
 
+<div align="center">
+<img src="./assets/harufishing_webfront.png" width="100%" alt="HaruFishing Banner" />
+</div>
 

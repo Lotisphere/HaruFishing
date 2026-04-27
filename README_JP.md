@@ -66,12 +66,29 @@ HaruFishingは、トークン消費を極限まで抑え、決定性の高い出
 *   **モジュール C: 審判ジェネレーター (core/synthesizer.py)**
     *   **ログの要約：** ロールプレイに参加しない「神の視点」を持つエージェント（The Observer）がインタラクションログを読み取り、近い将来に起こりうる3つの結末とその確率を予測します。
     *   **トークン最適化：** 長すぎるログを自動的に切り詰め、コンテキストウィンドウの制限を超えるのを防ぎます。
+    *   **ソーシャルネットワーク定量評価 (SNA):** キャラクターの有効伝播率やソーシャルマーケティングスコアなどのハードコアな指標を自動計算し、計算論理とともに提示します。
 
 ## 🌐 ビジュアライゼーションと UI
 フロントエンドは **Streamlit** (ui/web_app.py) をベースに構築されており、以下の特徴があります：
-- **バイリンガルインターフェース：** English と 中文（Chinese）を瞬時にシームレスに切り替え。
+- **トリリンガルインターフェース：** English、中文（Chinese）、日本語を瞬時にシームレスに切り替え。
+- **サイバーギークの美学：** 丸みのない絶対直角のモノクロデザイン、SVGフラクタルノイズによる等高線の暗紋背景、そしてクラシックな明朝体「Shippori Mincho」の採用により、サイバーパンクな雰囲気を最大限に引き出します。
+- **リアルタイム監視パネル：** 動的グラフにフローティングパネルを追加し、ネットワーク密度やクラスタリング係数、モジュール性などのトポロジーデータをリアルタイムで計算・表示します。
 - **デュアルモード入力：** 組み込みのクラシックなケースをワンクリックで実行することも、自分のドキュメントをドラッグ＆ドロップでアップロードしてカスタム抽出を行うこともできます。
 - **動的ナレッジグラフ：** **Pyvis** を深く統合し、リアルタイムの力学モデルネットワークグラフをレンダリングします。マウスでノード（人物、イベント、アクション）を自由にドラッグし、複雑に絡み合う関係網を直感的に感じることができます！
+
+
+## 📸 System Screenshots
+
+<div align="center">
+<img src="./assets/ui_cards.png" width="85%" alt="Character Metrics" style="border: 2px solid #555;"/>
+<br><em>Character Node Value Metrics & Initial Setup</em><br><br>
+
+<img src="./assets/ui_eval.png" width="85%" alt="Final Evaluation" style="border: 2px solid #555;"/>
+<br><em>Final Judgement & Quantitative Social Marketing Score</em><br><br>
+
+<img src="./assets/ui_graph.png" width="85%" alt="Knowledge Graph" style="border: 2px solid #555;"/>
+<br><em>Real-Time Force-Directed Knowledge Graph</em><br><br>
+</div>
 
 ## ⚙️ 依存ライブラリの概要
 - google-generativeai: コアとなる大規模言語モデル（LLM）との対話。
@@ -83,4 +100,9 @@ HaruFishingは、トークン消費を極限まで抑え、決定性の高い出
 
 ---
 *Made with 🎀 by Haru & Mangolotis-anon*
+
+
+<div align="center">
+<img src="./assets/harufishing_webfront.png" width="100%" alt="HaruFishing Banner" />
+</div>
 

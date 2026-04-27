@@ -1,5 +1,5 @@
 ﻿from pydantic import BaseModel, Field
-from typing import List, Dict
+from typing import List, Dict, Union, Any
 
 class CharacterMetrics(BaseModel):
     degree_centrality: float = Field(default=0.0, description="Degree Centrality 0.0-1.0")
@@ -21,7 +21,7 @@ class GraphNode(BaseModel):
     label: str = Field(description="节点显示名称")
     group: str = Field(description="节点类型(Person/Event/Action/Emotion)")
     impact: float = Field(default=5.0, description="影响力指数 0.0-10.0")
-    probability: str = Field(default="100%", description="发生概率 0%-100%")
+    probability: Union[str, float, int] = Field(default="100%", description="发生概率 0%-100%")
     sentiment: float = Field(default=0.0, description="情绪极性 -1.0(负面) 到 1.0(正面)")
 
 class GraphEdge(BaseModel):
@@ -35,14 +35,14 @@ class GraphUpdate(BaseModel):
 
 class Prediction(BaseModel):
     scenario: str = Field(description="预测结果场景")
-    probability: str = Field(description="概率")
+    probability: Union[str, float, int] = Field(description="概率")
     reasoning_chain: str = Field(description="逻辑链条")
 
 class FinalCharacterEval(BaseModel):
     name: str = Field(description="角色名称")
-    effective_propagation_rate: str = Field(description="有效传播率 (Effective Propagation Rate) 及计算结果")
-    diffusion_radius: str = Field(description="扩散半径换算 (Diffusion Radius) 及计算结果")
-    social_marketing_score: str = Field(description="具体的社交营销得分 (Social Marketing Score) 及计算结果")
+    effective_propagation_rate: Any = Field(description="有效传播率 (Effective Propagation Rate) 及计算结果")
+    diffusion_radius: Any = Field(description="扩散半径换算 (Diffusion Radius) 及计算结果")
+    social_marketing_score: Any = Field(description="具体的社交营销得分 (Social Marketing Score) 及计算结果")
 
 class SimulationOutput(BaseModel):
     predictions: List[Prediction] = Field(description="预测结果")
