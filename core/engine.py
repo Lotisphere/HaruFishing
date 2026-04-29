@@ -46,7 +46,7 @@ class SimulationEngine:
         
         try:
             req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers=headers)
-            with urllib.request.urlopen(req, timeout=60) as response:
+            with urllib.request.urlopen(req, timeout=300) as response:
                 result_data = json.loads(response.read().decode('utf-8'))
                 
             logger.info(f"    -> ✅ 请求成功，耗时: {time.time() - start_time:.2f} 秒")
@@ -133,5 +133,6 @@ class SimulationEngine:
                 unique_nodes.append(node)
                 
         return "".join(self.interaction_logs), unique_nodes, self.all_edges
+
 
 

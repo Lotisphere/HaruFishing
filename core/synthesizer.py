@@ -49,7 +49,7 @@ class Synthesizer:
         
         try:
             req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers=headers)
-            with urllib.request.urlopen(req, timeout=60) as response:
+            with urllib.request.urlopen(req, timeout=300) as response:
                 result_data = json.loads(response.read().decode('utf-8'))
                 
             logger.info(f"    -> ✅ 裁判请求成功，耗时: {time.time() - start_time:.2f} 秒")
@@ -68,4 +68,5 @@ class Synthesizer:
         except Exception as e:
             logger.error(f"❌ 裁判生成器解析失败: {e}")
             raise
+
 

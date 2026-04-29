@@ -54,7 +54,7 @@ class IngestionModule:
         
         try:
             req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers=headers)
-            with urllib.request.urlopen(req, timeout=60) as response:
+            with urllib.request.urlopen(req, timeout=300) as response:
                 result_data = json.loads(response.read().decode('utf-8'))
                 
             logger.info(f"✅ 原生 HTTP 请求完成，耗时: {time.time() - start_time:.2f} 秒")
@@ -89,3 +89,4 @@ class IngestionModule:
             agent_prompts[char.name] = prompt
             
         return agent_prompts
+
